@@ -2,6 +2,13 @@ import numpy as np
 from math import ceil
 
 def findPeak_1d_sf(lst):
+    """
+    Args:
+        lst: list of numbers
+
+    Returns:
+        max: A peak number
+    """
     max = 0
     for i in range(1,len(lst)-1):
         if i == len(lst)-2:
@@ -14,6 +21,15 @@ def findPeak_1d_sf(lst):
 
 
 def findPeak_1d_optimized(lst, low, high):
+    """
+    Args:
+        lst: List of numbers
+        low: low index
+        high: high indes
+    Returns:
+        A peak number
+
+    """
     n= len(lst)
     middle = low + (high - low) / 2
     middle = int(middle)
@@ -31,6 +47,15 @@ def findPeak_1d_optimized(lst, low, high):
 
 
 def findPeak_2d_optimized(arr,mid):
+    """
+
+    Args:
+        arr: 2D numpy array of numbers
+        mid: always equal column//2
+
+    Returns:
+        A 2D peak number
+    """
     row, col = arr.shape[0], arr.shape[1]
     max =0
     for i in range(row):
