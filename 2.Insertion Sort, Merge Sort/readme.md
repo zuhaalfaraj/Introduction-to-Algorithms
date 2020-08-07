@@ -7,7 +7,7 @@ Insertion sort is a sorting algorithm that places an unsorted element at its sui
 
 ### Example  
 <p align="center">
-<img src="insrExample.jpg" width="400" hight="900">
+<img src="insrExample.jpg" width="600">
 </p>
 
 ### Complixity
