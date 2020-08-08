@@ -23,8 +23,11 @@ Merge sort works on the principle of Divide and Conquer. Merge sort repeatedly b
 </p>
 
 ### Complixity
+<p align="center">
+<img src="timeCompMerg.jpg" width="500">
+</p>
 
-T(n) = 2T(n/2) + O(N) + O(1)
-
-O(nlogn)
-
+ Let's write that in a mathematical way: 
+<p align="center">
+<img src="mergeEq.gif" width="500">
+</p>
