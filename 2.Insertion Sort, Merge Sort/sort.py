@@ -1,15 +1,19 @@
+
+
 def insertionSort(lst):
-    for i in range(1,len(lst)):
-        if lst[i] < lst[i-1]:
+    lst = [-np.inf]+ lst
+    for i in range(2,len(lst)):
 
-            for j in range(len(lst[:i])):
-                if lst[len(lst[:i])-j] < lst[len(lst[:i])-j-1]:
+        t = lst[i]
+        k= i-1
 
-                    temp = lst[len(lst[:i])-j-1]
-                    lst[len(lst[:i])-j-1]= lst[len(lst[:i])-j]
-                    lst[len(lst[:i])-j]= temp
-                else:
-                    break
+        while t<lst[k]:
+            print(k)
+            lst[k+1]= lst[k]
+            k-=1
+        lst[k+1]=t
+    lst = lst[1:]
+
     return lst
 
 
@@ -40,10 +44,12 @@ def mergeSort(arr):
 
 if __name__=='__main__':
     import time
+    import numpy as np
     lst= [4,2,1,5,3,10,2,33,100,23,3,44,3,2323,12,45,23,55,234]
     #lst= np.asarray(lst)
     #lst = np.random.rand(700)
     #lst= list(lst)
+
     t1= time.time()
     y= insertionSort(lst)
     t2 = time.time()
@@ -52,10 +58,10 @@ if __name__=='__main__':
 
     tim1= t3-t2
     tim2= t2-t1
-    print(x)
+    #print(x)
     print(tim1)
     print(tim2)
-    print(tim1/tim2)
+    print(tim2-tim1)
 
-
+    print([3]+[2,3,4])
 
